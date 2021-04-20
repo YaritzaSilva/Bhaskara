@@ -37,7 +37,7 @@ namespace Bhaskara
             else
             {
                 Console.WriteLine("--RESULTADOS--");
-                Console.WriteLine($"x1= {x1} e x2= {x2}");
+                Console.WriteLine($"x1= {x1:N2} e x2= {x2:N2}");
             }
 
 
