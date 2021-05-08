@@ -20,27 +20,28 @@ namespace Bhaskara
             entrada3= Console.ReadLine();
             C= Convert.ToDouble(entrada3);
             
-            delta= B*B - 4*A*C;
-            x1= (-B + Math.Sqrt(delta)) / (2*A);
-            x2= (-B - Math.Sqrt(delta)) / (2*A);
+            
+
             
             if (A<=0)
             {
                 Console.WriteLine("Não é uma equação de segundo grau.");
+                Environment.Exit(-1);
             }
 
-            else if(delta < 0)
+            delta= B*B - 4*A*C;
+            
+            if(delta < 0)
             {
                 Console.WriteLine($"Como delta = {delta}, a equação não possui raízes reais");
+                Environment.Exit(-1);
             }
 
-            else
-            {
-                Console.WriteLine("--RESULTADOS--");
-                Console.WriteLine($"x1= {x1:N2} e x2= {x2:N2}");
-            }
+            x1= (-B + Math.Sqrt(delta)) / (2*A);
+            x2= (-B - Math.Sqrt(delta)) / (2*A);
 
-
+            Console.WriteLine("--RESULTADOS--");
+            Console.WriteLine($"x1= {x1:N2} e x2= {x2:N2}");
         }
     }
 }
